@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  gap: 5vh;
+  backdrop-filter: 5px;
+  background-color: #1a191a;
+
+}
+
+:root {
+  --border-background :none;
+  --border-color:blue;
+  --border-thickness:5px
+}
+
+.board{
+  max-width: 350px;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
+  background-color: var(--border-background);
+  display: flex;
+  align-items: flex-start;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  
+}
+@media only screen and (max-width:450px) {
+  .board{
+    max-width: 250px !important;
+    max-height: 250px !important;
+  
+}
+}
+
+.input{
+  height: 33.33%;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  border: 2px dashed khaki;
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 1000; /* Ensure it's on top */
 }
 
-.App-link {
-  color: #61dafb;
+.popup {
+  background-color: #ffffffe1;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup h2 {
+  margin-bottom: 13px;
 }
+
+.popup button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  background-color: #0f7bee; /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #69acf4;
+}
+
+
+
+
+
+
+
+
