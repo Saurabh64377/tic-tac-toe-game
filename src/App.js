@@ -28,6 +28,7 @@ const App = () => {
   // Function to show popup
   const handleWin = (message) => {
     setPopupMessage(message)
+    //showpopup
     setShowPopup(true)
   }
 
